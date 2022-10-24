@@ -1,0 +1,45 @@
+[2022-10-24 07:00:13] [1] [INFO] [TestNG] Running:
+  C:\Users\Feather\AppData\Local\JetBrains\IdeaIC2022.1\temp-testng-customsuite.xml
+
+[2022-10-24 07:00:19] [1] [INFO] Request method:	PATCH
+Request URI:	https://api.github.com/repos/TLohinava/underground-db/comments/87750662
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Multiparts:		<none>
+Cookies:		<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Body:
+{
+    "body": "Greattt stuff"
+}
+HTTP/1.1 404 Not Found
+Server: GitHub.com
+Date: Mon, 24 Oct 2022 18:59:57 GMT
+Content-Type: application/json; charset=utf-8
+Transfer-Encoding: chunked
+X-GitHub-Media-Type: github.v3; format=json
+X-RateLimit-Limit: 60
+X-RateLimit-Remaining: 56
+X-RateLimit-Reset: 1666639973
+X-RateLimit-Used: 4
+X-RateLimit-Resource: core
+Access-Control-Expose-Headers: ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset
+Access-Control-Allow-Origin: *
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+X-Frame-Options: deny
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Referrer-Policy: origin-when-cross-origin, strict-origin-when-cross-origin
+Content-Security-Policy: default-src 'none'
+Vary: Accept-Encoding, Accept, X-Requested-With
+Content-Encoding: gzip
+X-GitHub-Request-Id: 9B84:DD1C:AD27C77:AFD3199:6356E0AC
+
+{
+    "message": "Not Found",
+    "documentation_url": "https://docs.github.com/rest/reference/repos#update-a-commit-comment"
+}
+
