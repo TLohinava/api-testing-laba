@@ -5,7 +5,7 @@ import com.qaprosoft.carina.core.foundation.utils.Configuration;
 
 public class GetCommitMethod extends AbstractApiMethodV2 {
     public GetCommitMethod() {
-        super("/api/users/get/rq.json", null);
+        super(null, "/api/users/get/rs-commits.json");
         replaceUrlPlaceholder("base_url", Configuration.getEnvArg("url"));
     }
 }
