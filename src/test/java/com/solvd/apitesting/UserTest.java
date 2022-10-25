@@ -1,22 +1,25 @@
 package com.solvd.apitesting;
 
 import com.qaprosoft.apitools.validation.JsonComparatorContext;
+import io.restassured.path.json.JsonPath;
 import org.testng.annotations.Test;
 
 import java.time.Instant;
-import java.time.temporal.ChronoUnit;
 
 public class UserTest {
 
     @Test
     public void createStatusTest() {
-        PostCommentMethod pum = new PostCommentMethod();
-        pum.callAPI().jsonPath();
+        PostCommentMethod pcm = new PostCommentMethod();
+        JsonPath p = pcm.callAPI().jsonPath();
+        Integer i = p.getInt("id");
 
         JsonComparatorContext comparatorContext = JsonComparatorContext.context()
-                .<String>withPredicate("datePredicate", created_at -> Instant.parse(created_at).compareTo(Instant.now().truncatedTo(ChronoUnit.MINUTES)) >= 0);
+                .<String>withPredicate("datePredicate", created_at -> Instant.parse(created_at).compareTo(Instant.now()) <= 0)
+                .<String>withPredicate("htmlPredicate", html_url -> html_url.endsWith(i.toString()))
+                .<String>withPredicate("urlPredicate", url -> url.endsWith(i.toString()));
 
-        pum.validateResponse(comparatorContext);
+        pcm.validateResponse(comparatorContext);
     }
 
     @Test
@@ -36,7 +39,7 @@ public class UserTest {
     @Test
     public void deleteCommentTest() {
         DeleteCommentMethod dcm = new DeleteCommentMethod();
-        dcm.callAPI();
+        dcm.callAPIExpectSuccess();
     }
 
     @Test

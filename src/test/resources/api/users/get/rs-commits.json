@@ -19,7 +19,7 @@
         "url": "https://api.github.com/repos/TLohinava/underground-db/git/trees/090796b3a7bc6f34e3aa419be6918e8f5abb11fa"
       },
       "url": "https://api.github.com/repos/TLohinava/underground-db/git/commits/8b910c5f94d8fcc92a856b1551695e4c84007d35",
-      "comment_count": 5,
+      "comment_count": "type:Integer",
       "verification": {
         "verified": true,
         "reason": "valid",

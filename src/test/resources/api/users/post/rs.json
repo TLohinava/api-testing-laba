@@ -1,6 +1,6 @@
 {
-  "url": "skip",
-  "html_url": "https://github.com/${username}/${repo}/commit/${sha}#commitcomment-87841057",
+  "url": "predicate:urlPredicate",
+  "html_url": "predicate:htmlPredicate",
   "id": "type:Integer",
   "node_id": "type:String",
   "user": {
