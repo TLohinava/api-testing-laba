@@ -1,14 +1,14 @@
 package com.solvd.apitesting;
 
-import com.qaprosoft.carina.core.foundation.api.AbstractApiMethodV2;
 import com.qaprosoft.carina.core.foundation.utils.Configuration;
-import com.qaprosoft.carina.core.foundation.utils.R;
 
-public class PostCommentMethod extends AbstractApiMethodV2 {
+public class PostCommentMethod extends AuthorizationClass{
 
-    public PostCommentMethod() {
-        super("/api/users/post/rq.json", "/api/users/post/rs.json", "api/users/user.properties");
+    public PostCommentMethod(String username, String sha, String repo) {
+        super("/api/users/post/rq.json", "/api/users/post/rs.json");
         replaceUrlPlaceholder("base_url", Configuration.getEnvArg("url"));
-        setHeaders("Authorization=Bearer " + R.CONFIG.get("token"));
+        replaceUrlPlaceholder("username", username);
+        replaceUrlPlaceholder("sha", sha);
+        replaceUrlPlaceholder("repo", repo);
     }
 }

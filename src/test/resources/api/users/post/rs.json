@@ -1,5 +1,5 @@
 {
-  "url": "predicate:urlPredicate",
+  "url": "ognl: #val == 'https://api.github.com/repos/${username}/${repo}/comments/' + #root.id",
   "html_url": "predicate:htmlPredicate",
   "id": "type:Integer",
   "node_id": "type:String",
